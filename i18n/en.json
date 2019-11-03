@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"interwikiextracts-desc": "Reuse content from other wikis",
+	"interwikiextracts-error": "An error occurred while getting the content",
+	"interwikiextracts-no-api": "The specified wiki has no API defined",
+	"interwikiextracts-missing-title": "The specified page was not found",
+	"interwikiextracts-no-such-section": "The specified section was not found",
+	"interwikiextracts-invalid-section": "The specified section is invalid, it must be an integer"
+}

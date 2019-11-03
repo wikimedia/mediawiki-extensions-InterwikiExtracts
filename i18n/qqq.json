@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus"
+		]
+	},
+	"interwikiextracts-desc": "{{desc|name=InterwikiExtracts|url=https://www.mediawiki.org/wiki/Extension:InterwikiExtracts}}",
+	"interwikiextracts-error": "Generic error message when an error occurred while getting the content",
+	"interwikiextracts-no-api": "Error message when the specified wiki has no API defined",
+	"interwikiextracts-missing-title": "Error message when the specified page was not found",
+	"interwikiextracts-no-such-section": "Error message when the specified section was not found",
+	"interwikiextracts-invalid-section": "Error message when the specified section is invalid, it must be an integer"
+}

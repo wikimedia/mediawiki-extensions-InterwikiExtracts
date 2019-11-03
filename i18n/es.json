@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sophivorus",
+			"Fitoschido",
+			"Agusbou2015"
+		]
+	},
+	"interwikiextracts-desc": "Reutilizar contenido de otras wikis.",
+	"interwikiextracts-error": "Hubo un error al obtener el contenido",
+	"interwikiextracts-no-api": "No hay una API definida para la wiki especificada",
+	"interwikiextracts-missing-title": "No se encontró la página especificada",
+	"interwikiextracts-no-such-section": "No se encontró la sección especificada",
+	"interwikiextracts-invalid-section": "La sección especificada no es válida, debe ser un número entero"
+}
