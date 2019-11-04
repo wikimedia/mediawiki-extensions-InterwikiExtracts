@@ -13,3 +13,11 @@ $magicWords['es'] = [
 $magicWords['fr'] = [
    'InterwikiExtract' => [ 0, 'ExtraitInterwiki' ],
 ];
+
+$magicWords['sr-ec'] = [
+   'InterwikiExtract' => [ 0, 'ИзвозИнтервикија' ],
+];
+
+$magicWords['sr-el'] = [
+   'InterwikiExtract' => [ 0, 'IzvozIntervikija' ],
+];
