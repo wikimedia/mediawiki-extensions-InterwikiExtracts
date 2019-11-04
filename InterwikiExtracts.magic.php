@@ -15,9 +15,9 @@ $magicWords['fr'] = [
 ];
 
 $magicWords['sr-ec'] = [
-   'InterwikiExtract' => [ 0, 'ИзвозИнтервикија' ],
+   'InterwikiExtract' => [ 0, 'ИзвозМеђувикија', 'ИзвозИнтервикија' ],
 ];
 
 $magicWords['sr-el'] = [
-   'InterwikiExtract' => [ 0, 'IzvozIntervikija' ],
+   'InterwikiExtract' => [ 0, 'IzvozMeđuvikija', 'IzvozIntervikija' ],
 ];
