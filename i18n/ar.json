@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"interwikiextracts-desc": "إعادة استخدام المحتوى من ويكيات أخرى",
+	"interwikiextracts-error": "حدث خطأ أثناء الحصول على المحتوى",
+	"interwikiextracts-no-api": "لا يحتوي الويكي المحدد على نقطة نهاية API محددة",
+	"interwikiextracts-missing-title": "لم يتم العثور على الصفحة المحددة",
+	"interwikiextracts-no-such-section": "لم يتم العثور على القسم المحدد",
+	"interwikiextracts-invalid-section": "القسم المحدد غير صالح؛ يجب أن يكون عددا صحيحا"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eduardo Addad de Oliveira"
+		]
+	},
+	"interwikiextracts-desc": "Reutilizar conteúdo de outras wikis",
+	"interwikiextracts-error": "Ocorreu um erro ao obter o conteúdo",
+	"interwikiextracts-no-api": "A wiki especificada não possui um terminal de API definido",
+	"interwikiextracts-missing-title": "A página especificada não foi encontrada",
+	"interwikiextracts-no-such-section": "A seção especificada não foi encontrada",
+	"interwikiextracts-invalid-section": "A seção especificada é inválida, deve ser um número inteiro"
+}

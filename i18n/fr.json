@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Verdy p"
+		]
+	},
+	"interwikiextracts-desc": "Permet de réutiliser le contenu d’autres wikis",
+	"interwikiextracts-error": "Une erreur s’est produite lors de l’obtention du contenu",
+	"interwikiextracts-no-api": "Le wiki spécifié n’a aucun accès à son API défini",
+	"interwikiextracts-missing-title": "La page spécifiée n’a pas été trouvée",
+	"interwikiextracts-no-such-section": "La section spécifiée n’a pas été trouvée",
+	"interwikiextracts-invalid-section": "La section indiquée n’est pas valide, ce doit être un entier"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"interwikiextracts-desc": "Reusar contento de altere wikis",
+	"interwikiextracts-error": "Un error ha occurrite durante le obtention del contento",
+	"interwikiextracts-no-api": "Le wiki specificate non ha un puncto terminal API definite",
+	"interwikiextracts-missing-title": "Le pagina specificate non ha essite trovate",
+	"interwikiextracts-no-such-section": "Le section specificate non ha essite trovate",
+	"interwikiextracts-invalid-section": "Le section specificate non es valide, debe esser un numero integre"
+}

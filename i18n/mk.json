@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bjankuloski06"
+		]
+	},
+	"interwikiextracts-desc": "Употреба на содржини од други викија",
+	"interwikiextracts-error": "Се појави грешка при добивањето на содржините",
+	"interwikiextracts-no-api": "Укажаното вики нема одредено извршничка завршница",
+	"interwikiextracts-missing-title": "Не ја најдов укажаната страница",
+	"interwikiextracts-no-such-section": "Не го најдов укажаниот поднаслов",
+	"interwikiextracts-invalid-section": "Укажаниот поднаслов е неважечки. Мора да биде цел број"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"interwikiextracts-desc": "Ause arrete 'u condenute da otre uicchi",
+	"interwikiextracts-error": "Ha assute 'n'errore mendre ste pigghiave 'u condenute",
+	"interwikiextracts-no-api": "'A uicchi scacchiate non ge tène 'nu punde de spicce de l'API definite",
+	"interwikiextracts-missing-title": "'A pàgene specificate non g'ha state acchiate",
+	"interwikiextracts-no-such-section": "'A sezione specificate non g'ha state acchiate",
+	"interwikiextracts-invalid-section": "'A sezione specificate non g'è valide, addà essere 'nu indere"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Rail"
+		]
+	},
+	"interwikiextracts-desc": "Ponownie wykorzystać zawartość z innych wiki",
+	"interwikiextracts-error": "Podczas pobierania zawartości wystąpił błąd",
+	"interwikiextracts-no-api": "Podana wiki nie ma zdefiniowanego punktu końcowego API",
+	"interwikiextracts-missing-title": "Nie odnaleziono podanej strony",
+	"interwikiextracts-no-such-section": "Nie odnaleziono podanej sekcji",
+	"interwikiextracts-invalid-section": "Podana sekcja jest niewłaściwa; wartość musi być liczbą całkowitą"
+}

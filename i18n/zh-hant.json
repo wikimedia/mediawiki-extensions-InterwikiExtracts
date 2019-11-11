@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xiplus"
+		]
+	},
+	"interwikiextracts-desc": "重用其他Wiki的內容",
+	"interwikiextracts-error": "取得內容時發生錯誤",
+	"interwikiextracts-no-api": "指定的Wiki沒有已定義的API端點",
+	"interwikiextracts-missing-title": "找不到指定頁面",
+	"interwikiextracts-no-such-section": "找不到指定章節",
+	"interwikiextracts-invalid-section": "指定的章節無效，應該是一個整數"
+}

@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"interwikiextracts-desc": "Gjenbruk innhold fra andre wikier",
+	"interwikiextracts-error": "En feil oppsto under henting av innholdet",
+	"interwikiextracts-no-api": "Den gitte wikien har ikke noe API-endepunkt definert",
+	"interwikiextracts-missing-title": "Den gitte siden ble ikke funnet",
+	"interwikiextracts-no-such-section": "Den gitte seksjonen ble ikke funnet",
+	"interwikiextracts-invalid-section": "Den gitte seksjonen er ugyldig, den må være et heltall"
+}

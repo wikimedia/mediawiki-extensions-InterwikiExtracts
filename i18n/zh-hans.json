@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ywang"
+		]
+	},
+	"interwikiextracts-error": "加载内容时出错",
+	"interwikiextracts-no-api": "提供的Wiki没有已定义的API",
+	"interwikiextracts-missing-title": "未找到指定的页面",
+	"interwikiextracts-no-such-section": "未找到指定内容"
+}
