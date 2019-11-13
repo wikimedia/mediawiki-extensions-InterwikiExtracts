@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"interwikiextracts-missing-title": "No s’ha trobat la pàgina especificada",
+	"interwikiextracts-no-such-section": "No s’ha trobat la secció especificada",
+	"interwikiextracts-invalid-section": "La secció especificada no és vàlida; ha de ser un enter"
+}
