@@ -5,6 +5,9 @@
 		]
 	},
 	"interwikiextracts-desc": "Inhalt vun anere Wikien hei benotzen",
+	"interwikiextracts-error": "Beim Kréie vum Inhalt ass e Feeler geschitt",
+	"interwikiextracts-no-api": "Fir déi spezifizéiert Wiki ass keen API-Endpunkt definéiert",
 	"interwikiextracts-missing-title": "Déi spezifizéiert Säit gouf net fonnt",
-	"interwikiextracts-no-such-section": "De spezifizéierten Abschnitt gouf net fonnt"
+	"interwikiextracts-no-such-section": "De spezifizéierten Abschnitt gouf net fonnt",
+	"interwikiextracts-invalid-section": "De spezifizéierten Abschnitt ass net valabel, et muss eng Ganz Zuel sinn"
 }
