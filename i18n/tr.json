@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"interwikiextracts-desc": "Diğer wikilerden gelen içeriği yeniden kullan",
+	"interwikiextracts-error": "İçerik alınırken bir hata oluştu",
+	"interwikiextracts-no-api": "Belirtilen wikide tanımlanmış bir API bitiş noktası yok",
+	"interwikiextracts-missing-title": "Belirtilen sayfa bulunamadı",
+	"interwikiextracts-no-such-section": "Belirtilen bölüm bulunamadı",
+	"interwikiextracts-invalid-section": "Belirtilen bölüm geçersiz, tamsayı olmalı"
+}
