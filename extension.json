@@ -6,6 +6,9 @@
 	"descriptionmsg": "interwikiextracts-desc",
 	"license-name": "GPL-3.0-or-later",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"MessagesDirs": {
 		"InterwikiExtracts": [
 			"i18n"
