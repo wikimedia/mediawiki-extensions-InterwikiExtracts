@@ -55,7 +55,9 @@ class InterwikiExtracts {
 
 			// Get the format
 			$format = 'html'; // Default
-			if ( isset( $params['format'] ) and in_array( strtolower( $params['format'] ), [ 'html', 'wiki', 'text' ] ) ) {
+			if ( isset( $params['format'] ) &&
+				in_array( strtolower( $params['format'] ), [ 'html', 'wiki', 'text' ] )
+			) {
 				$format = strtolower( $params['format'] );
 				unset( $params['format'] );
 			}
@@ -108,7 +110,9 @@ class InterwikiExtracts {
 
 		// Replace relative links for absolute links
 		$domain = parse_url( $api, PHP_URL_SCHEME ) . '://' . parse_url( $api, PHP_URL_HOST );
-		$html = preg_replace( '#<a([^>]*)href="/([^"]+)"([^>]*)>#', '<a$1href="' . $domain . '/$2"$3>', $html );
+		$html = preg_replace(
+			'#<a([^>]*)href="/([^"]+)"([^>]*)>#', '<a$1href="' . $domain . '/$2"$3>', $html
+		);
 
 		return [ $html, 'isHTML' => true ];
 	}
@@ -239,7 +243,7 @@ class InterwikiExtracts {
 			$pair = array_map( 'trim', explode( '=', $param, 2 ) );
 			if ( count( $pair ) === 2 ) {
 				$array[ $pair[0] ] = $pair[1];
-			} else if ( count( $pair ) === 1 ) {
+			} elseif ( count( $pair ) === 1 ) {
 				$array[ $pair[0] ] = true;
 			}
 		}
