@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"interwikiextracts-desc": "Використання контенту з інших вікі",
+	"interwikiextracts-error": "Сталася помилка при отриманні контенту",
+	"interwikiextracts-no-api": "Для вказаної вікі не визначено кінцевої точки API",
+	"interwikiextracts-missing-title": "Вказану сторінку не знайдено",
+	"interwikiextracts-no-such-section": "Вказаний розділ не знайдено",
+	"interwikiextracts-invalid-section": "Вказаний розділ є недійсним, значення має бути числовим"
+}
