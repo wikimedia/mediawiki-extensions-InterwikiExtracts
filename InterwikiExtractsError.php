@@ -6,7 +6,7 @@
 class InterwikiExtractsError extends Exception {
 
 	/**
-	 * @var string $key Key identifying the type of error
+	 * @var string Key identifying the type of error
 	 */
 	public $key;
 
