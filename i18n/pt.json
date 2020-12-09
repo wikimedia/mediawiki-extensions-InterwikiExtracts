@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"interwikiextracts-desc": "Reutilizar conteúdo de outras wikis",
+	"interwikiextracts-error": "Ocorreu um erro ao obter o conteúdo",
+	"interwikiextracts-no-api": "A wiki especificada não tem nenhum ponto final da API definido",
+	"interwikiextracts-missing-title": "A página especificada não foi encontrada",
+	"interwikiextracts-no-such-section": "A secção especificada não foi encontrada",
+	"interwikiextracts-invalid-section": "A secção especificada é inválida; tem de ser um número inteiro"
+}
