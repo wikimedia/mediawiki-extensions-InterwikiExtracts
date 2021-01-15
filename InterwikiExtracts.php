@@ -8,7 +8,7 @@ class InterwikiExtracts {
 	 * @var string $userAgent User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:InterwikiExtracts/4.0 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
+		'Extension:InterwikiExtracts/4.1 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
 
 	/**
 	 * Main hook
@@ -182,6 +182,12 @@ class InterwikiExtracts {
 
 		// Remove extra line breaks
 		$text = preg_replace( "/\n/", '', $text );
+
+		// Remove everything but the requested section
+		if ( array_key_exists( 'section', $params ) ) {
+			$section = $params['section'];
+			$text = preg_replace( '/.*?<h\d><span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
+		}
 
 		return $text;
 	}
