@@ -184,19 +184,20 @@ class InterwikiExtracts {
 		$text = preg_replace( "/\n/", '', $text );
 
 		// Keep only the requested section
-		if ( array_key_exists( 'section', $params ) ) {
+		if ( isset( $params['section'] ) && $params['section'] ) {
 			$section = $params['section'];
-			$text = preg_replace( '!.*?<h\d><span[^>]+?>' . $section . '</span></h\d>(.+?)<h\d>.*!', '$1', $text );
+			$text = preg_replace( '/.*?<h\d><span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
 		}
 
 		// Keep only the requested paragraphs
-		if ( array_key_exists( 'paragraphs', $params ) ) {
-			$paragraphs = $params['paragraphs'];
-			preg_match_all( '!(<p>.+?</p>)!sim', $text, $matches );
-			$text = '';
-			foreach ( $matches[1] as $i => $match ) {
-				if ( $i < $paragraphs ) {
-					$text .= $match;
+		if ( isset( $params['paragraphs'] ) && $params['paragraphs'] ) {
+			preg_match_all( '/(<p>.+?<\/p>)/sim', $text, $matches );
+			if ( isset( $matches[1] ) ) {
+				$text = '';
+				foreach ( $matches[1] as $i => $match ) {
+					if ( $i < $params['paragraphs'] ) {
+						$text .= $match;
+					}
 				}
 			}
 		}
