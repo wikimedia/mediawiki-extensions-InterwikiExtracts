@@ -8,7 +8,7 @@ class InterwikiExtracts {
 	 * @var string $userAgent User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:InterwikiExtracts/4.1 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
+		'Extension:InterwikiExtracts/4.2 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
 
 	/**
 	 * Main hook
@@ -183,10 +183,22 @@ class InterwikiExtracts {
 		// Remove extra line breaks
 		$text = preg_replace( "/\n/", '', $text );
 
-		// Remove everything but the requested section
+		// Keep only the requested section
 		if ( array_key_exists( 'section', $params ) ) {
 			$section = $params['section'];
-			$text = preg_replace( '/.*?<h\d><span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
+			$text = preg_replace( '!.*?<h\d><span[^>]+?>' . $section . '</span></h\d>(.+?)<h\d>.*!', '$1', $text );
+		}
+
+		// Keep only the requested paragraphs
+		if ( array_key_exists( 'paragraphs', $params ) ) {
+			$paragraphs = $params['paragraphs'];
+			preg_match_all( '!(<p>.+?</p>)!sim', $text, $matches );
+			$text = '';
+			foreach ( $matches[1] as $i => $match ) {
+				if ( $i < $paragraphs ) {
+					$text .= $match;
+				}
+			}
 		}
 
 		return $text;
