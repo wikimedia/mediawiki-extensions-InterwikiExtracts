@@ -5,7 +5,7 @@ use MediaWiki\MediaWikiServices;
 class InterwikiExtracts {
 
 	/**
-	 * @var string $userAgent User agent for querying the API
+	 * @var string User agent for querying the API
 	 */
 	private static $userAgent =
 		'Extension:InterwikiExtracts/4.2 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
