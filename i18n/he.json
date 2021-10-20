@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"interwikiextracts-desc": "שימוש חוזר בתוכן מאתרי ויקי אחרים",
+	"interwikiextracts-error": "אירעה שגיאה בעת קבלת התוכן",
+	"interwikiextracts-no-api": "בוויקי שצוין לא מוגדרת נקודת קצה של API",
+	"interwikiextracts-missing-title": "הדף השצוין לא נמצא",
+	"interwikiextracts-no-such-section": "הפרק שצוין לא נמצא",
+	"interwikiextracts-invalid-section": "הפרק שצוין אינו תקין, זה חייב להיות מספר שלם"
+}
