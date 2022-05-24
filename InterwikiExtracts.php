@@ -180,6 +180,9 @@ class InterwikiExtracts {
 		// See https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exlimit=1&formatversion=2&titles=Science
 		$text = self::queryInterwiki( $api, $data );
 
+		// Remove templatestyle links
+		$text = preg_replace( "/<link[^>]+>/", '', $text );
+
 		// Remove extra line breaks
 		$text = preg_replace( "/\n/", '', $text );
 
