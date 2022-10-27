@@ -36,19 +36,22 @@ class InterwikiExtracts {
 			$params = array_slice( func_get_args(), 2 );
 			$params = self::parseParams( $params );
 
-			// Get the wiki to query
+			// Get the API endpoint to query
+			$api = $params['api'] ?? null;
+			unset( $params['api'] );
+
+			// Get the API endpoint from the interwiki table
 			$wiki = $params['wiki'] ?? 'wikipedia';
 			unset( $params['wiki'] );
-
-			// Get the API endpoint to query
-			// See https://doc.wikimedia.org/mediawiki-core/master/php/classApiQuerySiteinfo.html#a161831ba1940afa68e4cc0f568792cc4
-			$api = null;
-			$prefixes = MediaWikiServices::getInstance()->getInterwikiLookup()->getAllPrefixes();
-			foreach ( $prefixes as $row ) {
-				if ( $row['iw_prefix'] === $wiki ) {
-					$api = $row['iw_api'];
+			if ( !$api ) {
+				$prefixes = MediaWikiServices::getInstance()->getInterwikiLookup()->getAllPrefixes();
+				foreach ( $prefixes as $row ) {
+					if ( $row['iw_prefix'] === $wiki ) {
+						$api = $row['iw_api'];
+					}
 				}
 			}
+
 			if ( !$api ) {
 				throw new InterwikiExtractsError( 'no-api' );
 			}
