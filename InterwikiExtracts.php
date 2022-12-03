@@ -192,7 +192,7 @@ class InterwikiExtracts {
 		// Keep only the requested section
 		if ( isset( $params['section'] ) && $params['section'] ) {
 			$section = $params['section'];
-			$text = preg_replace( '/.*?<h\d><span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
+			$text = preg_replace( '/.*?<h\d>.*?<span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
 		}
 
 		// Keep only the requested paragraphs
