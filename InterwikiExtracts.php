@@ -221,7 +221,7 @@ class InterwikiExtracts {
 	 */
 	private static function queryInterwiki( string $api, array $data ) {
 		$query = $api . '?' . http_build_query( $data );
-		$request = MWHttpRequest::factory( $query );
+		$request = MediaWikiServices::getInstance()->getHttpRequestFactory()->create( $query );
 		$request->setUserAgent( self::$userAgent );
 		$status = $request->execute();
 		if ( !$status->isOK() ) {
