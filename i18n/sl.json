@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"interwikiextracts-desc": "Omogoča ponovno uporabo vsebine iz drugih vikijev",
+	"interwikiextracts-error": "Pri pridobivanju vsebine je prišlo do napake",
+	"interwikiextracts-no-api": "Navedeni viki nima določenega dostopa do svojega API-ja",
+	"interwikiextracts-missing-title": "Določena stran ni bila najdena",
+	"interwikiextracts-no-such-section": "Določeni razdelek ni bil najden",
+	"interwikiextracts-invalid-section": "Določeni razdelek je neveljaven, biti mora celo število"
+}
