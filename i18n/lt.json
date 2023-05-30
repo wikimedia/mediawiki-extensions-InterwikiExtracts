@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nokeoo"
+		]
+	},
+	"interwikiextracts-desc": "Panaudokite turinį iš kitų viki",
+	"interwikiextracts-error": "Įvyko klaida gaunant turinį",
+	"interwikiextracts-missing-title": "Nurodytas puslapis nerastas",
+	"interwikiextracts-no-such-section": "Nurodytas skyrius nerastas"
+}
