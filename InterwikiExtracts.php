@@ -8,7 +8,7 @@ class InterwikiExtracts {
 	 * @var string User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:InterwikiExtracts/4.2 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
+		'Extension:InterwikiExtracts/4.4 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
 
 	/**
 	 * Main hook
@@ -43,6 +43,12 @@ class InterwikiExtracts {
 			// Get the API endpoint from the interwiki table
 			$wiki = $params['wiki'] ?? 'wikipedia';
 			unset( $params['wiki'] );
+
+			// Special case for the local wiki
+			if ( $wiki === 'local' ) {
+				$api = 'local';
+			}
+
 			if ( !$api ) {
 				$prefixes = MediaWikiServices::getInstance()->getInterwikiLookup()->getAllPrefixes();
 				foreach ( $prefixes as $row ) {
@@ -220,41 +226,82 @@ class InterwikiExtracts {
 	 * @throws InterwikiExtractsError
 	 */
 	private static function queryInterwiki( string $api, array $data ) {
-		$query = $api . '?' . http_build_query( $data );
-		$request = MediaWikiServices::getInstance()->getHttpRequestFactory()->create( $query );
-		$request->setUserAgent( self::$userAgent );
-		$status = $request->execute();
-		if ( !$status->isOK() ) {
-			throw new InterwikiExtractsError;
-		}
-		$content = FormatJson::decode( $request->getContent() );
+		// Handle requests to the local API differently
+		if ( $api === 'local' ) {
+			$faux = new FauxRequest( $data );
+			$api = new ApiMain( $faux );
+			$api->execute();
+			$result = $api->getResult();
+			$content = $result->getResultData();
 
-		// First assume everything went ok
-		if ( isset( $content->parse->text ) ) {
-			return $content->parse->text;
-		}
-		if ( isset( $content->parse->wikitext ) ) {
-			return $content->parse->wikitext;
-		}
-		if ( isset( $content->query->pages[0]->extract ) ) {
-			return $content->query->pages[0]->extract;
-		}
-
-		// If we get to this point, something went wrong
-		if ( isset( $content->error->code ) ) {
-			switch ( $content->error->code ) {
-				case 'missingtitle':
-					throw new InterwikiExtractsError( 'missing-title' );
-				case 'missingtitle':
-					throw new InterwikiExtractsError( 'no-such-section' );
-				case 'invalidsection':
-					throw new InterwikiExtractsError( 'invalid-section' );
+			// None of this special treatment should be necessary
+			// but for some reason, formatversion=2 is not being respected
+			if ( isset( $content['parse']['text'] ) ) {
+				return $content['parse']['text'];
 			}
+			if ( isset( $content['parse']['wikitext'] ) ) {
+				return $content['parse']['wikitext'];
+			}
+			if ( isset( $content['query']['pages'] ) ) {
+				$page = array_shift( $content['query']['pages'] );
+				if ( isset( $page['extract']['*'] ) ) {
+					return $page['extract']['*'];
+				}
+			}
+			if ( isset( $content['error']['code'] ) ) {
+				switch ( $content['error']['code'] ) {
+					case 'missingtitle':
+						throw new InterwikiExtractsError( 'missing-title' );
+					case 'missingtitle':
+						throw new InterwikiExtractsError( 'no-such-section' );
+					case 'invalidsection':
+						throw new InterwikiExtractsError( 'invalid-section' );
+				}
+			}
+			if ( isset( $page['missing'] ) ) {
+				throw new InterwikiExtractsError( 'missing-title' );
+			}
+			throw new InterwikiExtractsError;
+
+		// Else this is a normal request to an external API
+		} else {
+			$query = $api . '?' . http_build_query( $data );
+			$request = MediaWikiServices::getInstance()->getHttpRequestFactory()->create( $query );
+			$request->setUserAgent( self::$userAgent );
+			$status = $request->execute();
+			if ( !$status->isOK() ) {
+				throw new InterwikiExtractsError;
+			}
+			$content = $request->getContent();
+			$content = FormatJson::decode( $content );
+
+			// First assume everything went ok
+			if ( isset( $content->parse->text ) ) {
+				return $content->parse->text;
+			}
+			if ( isset( $content->parse->wikitext ) ) {
+				return $content->parse->wikitext;
+			}
+			if ( isset( $content->query->pages[0]->extract ) ) {
+				return $content->query->pages[0]->extract;
+			}
+
+			// If we get to this point, something went wrong
+			if ( isset( $content->error->code ) ) {
+				switch ( $content->error->code ) {
+					case 'missingtitle':
+						throw new InterwikiExtractsError( 'missing-title' );
+					case 'missingtitle':
+						throw new InterwikiExtractsError( 'no-such-section' );
+					case 'invalidsection':
+						throw new InterwikiExtractsError( 'invalid-section' );
+				}
+			}
+			if ( isset( $content->query->pages[0]->missing ) ) {
+				throw new InterwikiExtractsError( 'missing-title' );
+			}
+			throw new InterwikiExtractsError; // Generic error message
 		}
-		if ( isset( $content->query->pages[0]->missing ) ) {
-			throw new InterwikiExtractsError( 'missing-title' );
-		}
-		throw new InterwikiExtractsError; // Generic error message
 	}
 
 	/**
