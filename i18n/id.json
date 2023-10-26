@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Veracious"
+		]
+	},
+	"interwikiextracts-desc": "Gunakan kembali konten dari wiki lain",
+	"interwikiextracts-error": "Terjadi galat saat mengambil konten",
+	"interwikiextracts-no-api": "Wiki yang ditentukan tidak memiliki penentuan titik akhir API",
+	"interwikiextracts-missing-title": "Halaman tersebut tak dapat ditemukan",
+	"interwikiextracts-no-such-section": "Bagian tersebut tak dapat ditemukan",
+	"interwikiextracts-invalid-section": "Bagian tersebut tidak sah, karena harus bilangan bulat"
+}
