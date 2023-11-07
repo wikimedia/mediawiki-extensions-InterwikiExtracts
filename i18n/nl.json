@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"McDutchie"
 		]
 	},
 	"interwikiextracts-desc": "Inhoud van andere wiki's hergebruiken",
 	"interwikiextracts-error": "Er is een fout opgetreden tijdens het ophalen van de inhoud",
+	"interwikiextracts-no-api": "Voor de opgegeven wiki is geen API-eindpunt gedefinieerd",
 	"interwikiextracts-missing-title": "De opgegeven pagina kon niet worden gevonden",
 	"interwikiextracts-no-such-section": "Het opgegeven deelonderwerp kon niet worden gevonden",
 	"interwikiextracts-invalid-section": "Het opgegeven deelonderwerp is ongeldig, dit moet een geheel getal zijn"
