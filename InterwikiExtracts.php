@@ -8,7 +8,7 @@ class InterwikiExtracts {
 	 * @var string User agent for querying the API
 	 */
 	private static $userAgent =
-		'Extension:InterwikiExtracts/4.4 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
+		'Extension:InterwikiExtracts/4.5 (https://www.mediawiki.org/wiki/Extension:InterwikiExtracts)';
 
 	/**
 	 * Main hook
@@ -193,7 +193,7 @@ class InterwikiExtracts {
 		// Keep only the requested section
 		if ( isset( $params['section'] ) && $params['section'] ) {
 			$section = $params['section'];
-			$text = preg_replace( '/.*?<h\d>.*?<span[^>]+?>' . $section . '<\/span><\/h\d>(.+?)<h\d>.*/', '$1', $text );
+			$text = preg_replace( '/.*?<h\d[^>]+?>' . $section . '<\/h\d>\n*(.+?)\n*<h\d.*/', '$1', $text );
 		}
 
 		// Keep only the requested paragraphs
