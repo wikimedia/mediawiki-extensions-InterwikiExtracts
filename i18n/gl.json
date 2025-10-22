@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Toliño"
+		]
+	},
+	"interwikiextracts-desc": "Reutilizar contido doutros wikis",
+	"interwikiextracts-error": "Produciuse un erro ao obter o contido",
+	"interwikiextracts-no-api": "O wiki especificado non ten definido ningún extremo da API",
+	"interwikiextracts-missing-title": "Non se atopou a páxina especificada",
+	"interwikiextracts-no-such-section": "Non se atopou a sección especificada",
+	"interwikiextracts-invalid-section": "A sección especificada non é válida; debe ser un número enteiro"
+}
