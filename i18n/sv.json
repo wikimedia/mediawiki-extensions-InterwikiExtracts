@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Stefan2255"
+		]
+	},
+	"interwikiextracts-desc": "Återanvänd innehåll från andra wikier",
+	"interwikiextracts-error": "Ett fel uppstod när innehållet hämtades",
+	"interwikiextracts-no-api": "Den angivna wikin har ingen definierad API-slutpunkt",
+	"interwikiextracts-missing-title": "Den angivna sidan hittades inte",
+	"interwikiextracts-no-such-section": "Det angivna avsnittet hittades inte",
+	"interwikiextracts-invalid-section": "Det angivna avsnittet är ogiltigt, det måste vara ett heltal"
+}
