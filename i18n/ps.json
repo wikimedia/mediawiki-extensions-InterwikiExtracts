@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"شاه زمان پټان"
+		]
+	},
+	"interwikiextracts-desc": "د نورو ويکي‌گانو منځپانگه بياکارول",
+	"interwikiextracts-error": "د منځپانگې ترلاسه‌کولو پرمهال تېروتنه رامنځته شوه",
+	"interwikiextracts-no-api": "ټاکل شوې ويکي د کاريال‌بهير‌مخبڼې څرگند شوی پای‌ټکی نلري",
+	"interwikiextracts-missing-title": "ټاکل شوی مخ ونه موندل شو",
+	"interwikiextracts-no-such-section": "ټاکل شوې برخه ونه موندل شوه",
+	"interwikiextracts-invalid-section": "ټاکل شوې برخه ناسمه ده، دا بايد يوه بشپړه شمېره وي"
+}
