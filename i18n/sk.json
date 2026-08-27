@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"interwikiextracts-desc": "Opakované použitie obsahu z iných wiki",
+	"interwikiextracts-error": "Pri získavaní obsahu nastala chyba",
+	"interwikiextracts-no-api": "Zadaná wiki nemá definovaný koncový bod API",
+	"interwikiextracts-missing-title": "Zadaná stránka sa nenašla",
+	"interwikiextracts-no-such-section": "Zadaná sekcia sa nenašla",
+	"interwikiextracts-invalid-section": "Zadaná sekcia je neplatná, musí to byť celé číslo"
+}
